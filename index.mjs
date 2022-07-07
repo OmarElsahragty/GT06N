@@ -9,7 +9,7 @@ createServer((connection) => {
     console.log(parsedData);
 
     if (parsedData.event === "login") {
-      connection.write(Buffer.from(parsedData.imei, "utf8"));
+      connection.write(Buffer.from("787805010001d9dc0d0a", "hex"));
     }
   });
 })
