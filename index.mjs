@@ -4,12 +4,16 @@ import gt06n from "./lib/gt06n.mjs";
 createServer((connection) => {
   connection.setEncoding("hex");
   connection.on("data", (packet) => {
-    const parsedData = gt06n(packet);
+    console.log("PACKET", packet);
 
-    console.log(parsedData);
+    const parsedPacket = gt06n(packet);
 
-    if (parsedData.responseMessage) {
-      connection.write(parsedData.responseMessage);
+    console.log("PARSED PACKET", parsedPacket);
+
+    if (!parsedPacket) return;
+
+    if (parsedPacket.responseMessage) {
+      connection.write(parsedPacket.responseMessage);
     }
   });
 })

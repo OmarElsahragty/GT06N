@@ -1,11 +1,18 @@
 {
-  "name": "gt06n_server",
+  "name": "gt06n",
   "version": "0.9",
-  "description": "Gt06n Server",
+  "description": "Gt06n parser",
   "main": "index.js",
   "type": "module",
   "license": "MIT",
+  "keywords": [
+    "Gt06n",
+    "parser",
+    "gps",
+    "tracking"
+  ],
   "scripts": {
-    "start": "node index.mjs"
+    "start": "node index.mjs",
+    "test": "node test/check.mjs"
   }
 }
