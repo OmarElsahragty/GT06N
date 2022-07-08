@@ -17,7 +17,10 @@ createServer((connection) => {
         connection.write(parsedPacket.responseMessage);
       }
     })
-    .on("error", () => connection.end());
+    .on("error", (err) => {
+      console.error(err);
+      connection.end();
+    });
 })
   .on("listening", () => console.log("server is running on port 60"))
   .listen(60);
