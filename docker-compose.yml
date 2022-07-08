@@ -5,5 +5,5 @@ services:
     build:
       context: .
     ports:
-      - "3333:3333"
+      - "8080:8080"
     container_name: gt06n
