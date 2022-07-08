@@ -17,10 +17,7 @@ createServer((connection) => {
         connection.write(parsedPacket.responseMessage);
       }
     })
-    .on("error", (err) => {
-      console.error("error", err);
-      connection.end();
-    });
+    .on("error", () => connection.end());
 })
   .on("listening", () => console.log("server is running on port 3333"))
   .listen(3333);
