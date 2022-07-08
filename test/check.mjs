@@ -8,7 +8,7 @@ import gt06n from "../lib/gt06n.mjs";
   "787808134B040300010011061F0D0A", // status
 ].forEach((packet) => console.log(gt06n(packet)));
 
-const socket = connect(10203, "127.0.0.1")
+const socket = connect(60, "34.90.8.113")
   .on("error", function (err) {
     console.error("error", err);
     socket.end();

@@ -5,5 +5,5 @@ services:
     build:
       context: .
     ports:
-      - "10203:10203"
+      - "60:60"
     container_name: gt06n
